@@ -1,0 +1,13 @@
+<div class='text-center'>
+  <%= form_for @task, html: {class: 'form-group'} do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: ""%>
+
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+
+    <%= f.check_box :completed %>
+
+    <%= f.submit %>
+  <% end %>
+</div>

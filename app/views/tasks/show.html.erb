@@ -1,0 +1,16 @@
+<div class='text-left'>
+  <%= link_to 'Edit this task', edit_path(@task), class: 'btn btn-warning'%>
+</div>
+
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p>
+  <% if @task.completed %>
+    <i class="far fa-check-square"> This task <span class="green">is</span> completed!</i>
+  <% else %>
+    <i class="far fa-square"> This task is <span class="red">not</span> completed yet.</i>
+  <% end %>
+</p>
+<div class='text-center'>
+<%= link_to 'Back to list', tasks_path, class: 'btn btn-primary' %>
+</div>
